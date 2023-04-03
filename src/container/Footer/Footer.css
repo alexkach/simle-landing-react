@@ -1,0 +1,113 @@
+.app__footer {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+
+	background: var(--color-black);
+	padding-top: 0;
+}
+
+.app__footer-links {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 7.5rem;
+	gap: 1rem;
+}
+.app__footer-links:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.app__footer-headtext {
+	font-size: 2rem;
+	color: var(--color-gray);
+	font-family: var(--font-base);
+	text-transform: capitalize;
+	line-height: 1.3;
+	letter-spacing: 0.04em;
+}
+.app__footer-headtext:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+
+.footer__copyright {
+	position: relative;
+}
+.app__footer-links_contact,
+.app__footer-links_logo,
+.app__footer-links_work {
+	flex: 1;
+	text-align: center;
+}
+.app__footer-links_contact,
+.app__footer-links_work {
+	padding: 1.5rem 0;
+}
+.app__footer-links_work p:nth-child(2n + 1) {
+	margin-bottom: 1rem;
+}
+
+.spoon__img {
+	margin: 1rem;
+}
+.footer__logo {
+	font-size: 4rem;
+	line-height: 1.3;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--color-golden);
+}
+.footer__logo:not(:last-child) {
+	margin-bottom: 2rem;
+}
+.app__footer-links_logo-icons svg {
+	color: var(--color-white);
+	font-size: 1.5rem;
+	margin: 0.75rem;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.app__footer-links_logo-icons svg:hover {
+	color: var(--color-golden);
+}
+@media screen and (min-width: 125rem) {
+	.app__footer-headtext {
+		font-size: 3.2rem;
+	}
+}
+@media screen and (max-width: 71.875rem) {
+	.app__footer-links {
+		align-items: center;
+		flex-direction: column;
+		padding: 0;
+	}
+	.app__footer-links_contact,
+	.app__footer-links_logo,
+	.app__footer-links_work {
+		margin: 1.5rem 0;
+	}
+	.app__footer-headtext {
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 40.625rem) {
+	.app__footer {
+		padding: 0 2rem 2rem;
+	}
+	.app__footer-links_contact,
+	.app__footer-links_logo,
+	.app__footer-links_work {
+		margin: 1rem 0;
+	}
+	.footer__logo {
+		font-size: 3rem;
+	}
+}
+@media screen and (max-width: 21.875rem) {
+}

@@ -1,0 +1,131 @@
+.app__gallery {
+	display: flex;
+	flex-direction: row;
+	background: var(--color-black);
+	padding: 4rem 0 4rem 6rem;
+}
+
+.app__gallery-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-right: 2rem;
+	min-width: 31.25rem;
+}
+.app__gallery-content > :not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+.app__gallery-images {
+	flex: 1;
+	min-width: 50%;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+.app__gallery-images_container {
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+	overflow-x: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.app__gallery-images_container::-webkit-scrollbar {
+	display: none;
+}
+.app__gallery-images_card {
+	position: relative;
+	min-width: 18.8125rem;
+	height: 27.9375rem;
+	margin-right: 2rem;
+}
+.gallery__image-icon {
+	position: absolute;
+	color: #fff;
+	font-size: 2rem;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+}
+
+.app__gallery-images_card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 1;
+	cursor: pointer;
+	transition: all 0.5s ease 0s;
+}
+.app__gallery-images_card:hover img {
+	opacity: 0.35;
+}
+.app__gallery-images_card:hover .gallery__image-icon {
+	opacity: 1;
+}
+.app__gallery-images_arrow {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	position: absolute;
+	bottom: 5%;
+}
+.gallery__arrow-icon {
+	color: var(--color-golden);
+	font-size: 2rem;
+	cursor: pointer;
+	background: var(--color-black);
+	border-radius: 5px;
+}
+@media (any-hover: hover) {
+	.gallery__arrow-icon:hover {
+		color: var(--color-white);
+	}
+}
+@media screen and (min-width: 125rem) {
+	.app__gallery-content {
+		min-width: 1000px;
+		padding-right: 4rem;
+	}
+	.app__gallery-images_card {
+		min-width: 25rem;
+		height: 34.375rem;
+	}
+}
+@media screen and (max-width: 71.875rem) {
+	.app__gallery {
+		flex-direction: column;
+		row-gap: 4rem;
+	}
+	.app__gallery-images {
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 53.125rem) {
+	.app__gallery {
+		padding: 4rem 0 4rem 4rem;
+	}
+	.app__gallery-images_card {
+		margin-right: 1.5rem;
+	}
+}
+@media screen and (max-width: 40.625rem) {
+	.app__gallery {
+		padding: 4rem 0 4rem 2rem;
+	}
+	.app__gallery-content {
+		min-width: 100%;
+	}
+	.app__gallery-images_arrow {
+		display: none;
+	}
+	.app__gallery-images_card {
+		min-width: 15rem;
+		height: 20rem;
+	}
+	.app__gallery-images_card {
+		margin-right: 1rem;
+	}
+}
